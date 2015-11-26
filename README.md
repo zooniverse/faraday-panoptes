@@ -4,6 +4,8 @@ This gem gives you a set of middleware that lets you use the Zooniverse Panoptes
 
 ```ruby
 api_client = Faraday.new(url: "https://panoptes.zooniverse.org") do |faraday|
+  faraday.adapter Faraday.default_adapter # WITHOUT THIS LINE NOTHING WILL HAPPEN
+  
   faraday.request :panoptes_client_credentials, url: 'https://panoptes.zooniverse.org', client_id: 'APPLICATION_ID', client_secret: 'APPLICATION_SECRET'
   faraday.request :panoptes_api_v1
   faraday.response :json
