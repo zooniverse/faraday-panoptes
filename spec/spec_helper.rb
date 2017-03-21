@@ -106,6 +106,3 @@ def configure(faraday)
   faraday.request :json
   faraday.response :json
 end
-
-access_token_connection
-credentialed_connection
