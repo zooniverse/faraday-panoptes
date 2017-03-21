@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Tue, 21 Mar 2017 19:25:46 GMT
+      - Tue, 21 Mar 2017 19:39:40 GMT
       Server:
       - nginx/1.10.0 (Ubuntu)
       Strict-Transport-Security:
@@ -31,9 +31,9 @@ http_interactions:
       Vary:
       - Origin
       X-Request-Id:
-      - 576d8e19-aafb-4bb1-9a20-69affe36f11f
+      - afea410f-d6e7-4283-931e-913351a0b77f
       X-Runtime:
-      - '0.008393'
+      - '0.005249'
       Content-Length:
       - '0'
       Connection:
@@ -42,5 +42,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version:
-  recorded_at: Tue, 21 Mar 2017 19:25:46 GMT
+  recorded_at: Tue, 21 Mar 2017 19:39:40 GMT
 recorded_with: VCR 3.0.3
