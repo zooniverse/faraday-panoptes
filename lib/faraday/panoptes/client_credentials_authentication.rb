@@ -51,7 +51,7 @@ module Faraday
           client_id: @client_id,
           client_secret: @client_secret)
 
-        raise CredentialsOAuthError.new "Failed to obtain access token" if result.status == 422 or result.body.empty?
+        raise CredentialsOAuthError.new "Failed to obtain access token" if result.status == 401 or result.status == 422 or result.body.empty?
         JSON.parse(result.body)
       end
     end
