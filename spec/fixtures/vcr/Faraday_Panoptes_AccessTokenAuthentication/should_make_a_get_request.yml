@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://panoptes-staging.zooniverse.org/api/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Tue, 21 Mar 2017 19:39:40 GMT
+      Server:
+      - nginx/1.10.0 (Ubuntu)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Origin
+      X-Request-Id:
+      - afea410f-d6e7-4283-931e-913351a0b77f
+      X-Runtime:
+      - '0.005249'
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Tue, 21 Mar 2017 19:39:40 GMT
+recorded_with: VCR 3.0.3
