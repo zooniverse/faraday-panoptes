@@ -101,8 +101,8 @@ def auth_request(faraday, auth)
 end
 
 def configure(faraday)
-  faraday.adapter Faraday.default_adapter
   faraday.request :panoptes_api_v1
   faraday.request :json
   faraday.response :json
+  faraday.adapter Faraday.default_adapter
 end

@@ -4,11 +4,11 @@ This gem gives you a set of middleware that lets you use the Zooniverse Panoptes
 
 ```ruby
 api_client = Faraday.new(url: "https://panoptes.zooniverse.org") do |faraday|
-  faraday.adapter Faraday.default_adapter # WITHOUT THIS LINE NOTHING WILL HAPPEN
-  
   faraday.request :panoptes_client_credentials, url: 'https://panoptes.zooniverse.org', client_id: 'APPLICATION_ID', client_secret: 'APPLICATION_SECRET'
   faraday.request :panoptes_api_v1
   faraday.response :json
+
+  faraday.adapter Faraday.default_adapter # WITHOUT THIS LINE NOTHING WILL HAPPEN
 end
 
 response = api_client.get("/api/projects/1")
@@ -35,9 +35,23 @@ Or install it yourself as:
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+Use docker & compose to setup the dev env
+
+```shell
+$ docker-compose build
+```
+
+Run a bash shell inside the new container
+
+```shell
+$ docker-compose run --service-ports --rm faraday-panoptes bash
+```
+
+To run the tests you will have to configure the ENV variables in
 
 ## Contributing
 
