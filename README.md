@@ -51,8 +51,6 @@ Run a bash shell inside the new container
 $ docker-compose run --service-ports --rm faraday-panoptes bash
 ```
 
-To run the tests you will have to configure the ENV variables in
-
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/faraday-panoptes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
